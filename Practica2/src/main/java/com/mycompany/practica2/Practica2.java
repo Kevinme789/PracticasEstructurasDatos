@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 package com.mycompany.practica2;
+
 /**
  *
  * @author kevin
@@ -17,10 +18,15 @@ public class Practica2 {
             switch (opcion) {
                 case 1:
                     obj.escribir();
+                    break;
                 case 2:
                     obj.leer();
+                    break;
+                case 3:
+                    obj.otroArchivo("otraPractica.txt");
+                    obj.escribir();
 
             }
-        }while(opcion!= 0);
+        } while (opcion != 0);
     }
 }
