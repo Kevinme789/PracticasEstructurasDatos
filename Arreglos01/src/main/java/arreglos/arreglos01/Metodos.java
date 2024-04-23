@@ -30,6 +30,7 @@ public class Metodos {
         System.out.println("Buscar numero                  [4]");
         System.out.println("Eliminar numero                [5]");
         System.out.println("Agregar numero                 [6]");
+        System.out.println("Insertar en orden              [7]");
         System.out.println("Salir                          [0]");
         return sc.nextInt();
     }
@@ -88,21 +89,36 @@ public class Metodos {
         }
     }
 
-    public void agregar(int num) {
+    public void agregar(int num, int pos) {
         if (ev != myArray.length) {
+            desplazarDerecha(pos);
+            myArray[pos] = num;
             ev++;
-            desplazarDerecha();
-            myArray[0] = num;
 
         } else {
             System.out.println("Arreglo lleno");
         }
     }
 
-    public void desplazarDerecha() {
-        for (int i = ev - 1; 0 < i; i--) {
+    public void desplazarDerecha(int pos) {
+        for (int i = ev; pos < i; i--) {
             myArray[i] = myArray[i - 1];
 
         }
+    }
+
+    public void insOrden(int num) {
+        int pos = 0;
+        if (ev < myArray.length) {
+            while ((pos < ev) && (myArray[pos] < num)) {
+                pos++;
+            }
+            desplazarDerecha(pos);
+            myArray[pos] = num;
+            ev++;
+        } else {
+            System.out.println("Arreglo lleno.....");
+        }
+
     }
 }

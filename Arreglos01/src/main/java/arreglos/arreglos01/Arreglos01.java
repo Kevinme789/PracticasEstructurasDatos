@@ -43,7 +43,14 @@ public class Arreglos01 {
                 case 6:
                     System.out.println("Ingresa el numero a agregar:");
                     num = obj.sc.nextInt();
-                    obj.agregar(num);
+                    System.out.println("Ingresa la posicion:");
+                    posicion = obj.sc.nextInt();
+                    obj.agregar(num, posicion);
+                    break;
+                case 7:
+                    System.out.println("Insertar numero: ");
+                    num = obj.sc.nextInt();
+                    obj.insOrden(num);
                 default:
                     break;
             }
