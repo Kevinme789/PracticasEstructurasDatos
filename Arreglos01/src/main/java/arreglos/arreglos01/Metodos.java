@@ -29,6 +29,7 @@ public class Metodos {
         System.out.println("Presentar                      [3]");
         System.out.println("Buscar numero                  [4]");
         System.out.println("Eliminar numero                [5]");
+        System.out.println("Agregar numero                 [6]");
         System.out.println("Salir                          [0]");
         return sc.nextInt();
     }
@@ -52,7 +53,7 @@ public class Metodos {
     }
 
     public void presentar() {
-        for (int i = 0; i < myArray.length; i++) {
+        for (int i = 0; i < ev; i++) {
             System.out.printf(myArray[i] + ", ");
 
         }
@@ -84,6 +85,24 @@ public class Metodos {
     public void desplazarIzquierda(int pos) {
         for (int i = pos; i < ev - 1; i++) {
             myArray[i] = myArray[i + 1];
+        }
+    }
+
+    public void agregar(int num) {
+        if (ev != myArray.length) {
+            ev++;
+            desplazarDerecha();
+            myArray[0] = num;
+
+        } else {
+            System.out.println("Arreglo lleno");
+        }
+    }
+
+    public void desplazarDerecha() {
+        for (int i = ev - 1; 0 < i; i--) {
+            myArray[i] = myArray[i - 1];
+
         }
     }
 }

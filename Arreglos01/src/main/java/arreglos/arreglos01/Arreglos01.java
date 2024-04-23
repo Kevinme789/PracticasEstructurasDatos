@@ -39,6 +39,11 @@ public class Arreglos01 {
                     System.out.println("Ingresa el numero a eliminar:");
                     num = obj.sc.nextInt();
                     obj.eliminar(num);
+                    break;
+                case 6:
+                    System.out.println("Ingresa el numero a agregar:");
+                    num = obj.sc.nextInt();
+                    obj.agregar(num);
                 default:
                     break;
             }
