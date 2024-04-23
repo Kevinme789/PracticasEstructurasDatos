@@ -27,34 +27,63 @@ public class Metodos {
         System.out.println("Insertar lleno                 [1]");
         System.out.println("Insertar en espacio libre      [2]");
         System.out.println("Presentar                      [3]");
+        System.out.println("Buscar numero                  [4]");
+        System.out.println("Eliminar numero                [5]");
         System.out.println("Salir                          [0]");
         return sc.nextInt();
     }
-    
-    
-    public void leerLleno(){
-    for(int i=0; i < myArray.length;i++){
-    System.out.println("Inserte elemento de posicion " + (i+1));
-    myArray[i]=sc.nextInt();
-    
+
+    public void leerLleno() {
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.println("Inserte elemento de posicion " + (i + 1));
+            myArray[i] = sc.nextInt();
+
+        }
+        ev = myArray.length;
     }
-    ev=myArray.length;
+
+    public void leerSig() {
+        if (ev < myArray.length) {
+            System.out.println("Inserte elemento: ");
+            myArray[ev] = sc.nextInt();
+        } else {
+            System.out.println("Arreglo lleno");
+        }
     }
-    
-    public void leerSig(){
-    if (ev < myArray.length){
-    System.out.println("Inserte elemento: ");
-    myArray[ev]=sc.nextInt();
-    }else{
-    System.out.println("Arreglo lleno");
+
+    public void presentar() {
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.printf(myArray[i] + ", ");
+
+        }
+        System.out.println();
     }
+
+    public int secuencial(int num) {
+        for (int i = 0; i < myArray.length; i++) {
+            if (myArray[i] == num) {
+                return i;
+            }
+
+        }
+        return -1;
+
     }
-    
-    public void presentar(){
-    for (int i=0; i <myArray.length;i++){
-    System.out.printf(myArray[i]+", ");
-    
+
+    public void eliminar(int num) {
+        int pos = secuencial(num);
+        if (pos != -1) {
+            desplazarIzquierda(pos);
+            ev--;
+
+        } else {
+            System.out.println("El elemento no existe...");
+        }
     }
-    System.out.println();
+
+    public void desplazarIzquierda(int pos) {
+        for (int i = pos; i < ev - 1; i++) {
+            myArray[i] = myArray[i + 1];
+        }
     }
 }
