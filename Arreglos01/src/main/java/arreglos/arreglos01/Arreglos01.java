@@ -11,7 +11,7 @@ public class Arreglos01 {
 
     public static void main(String[] args) {
         Metodos obj = new Metodos();
-        int opc, num, posicion;
+        int opc, num, posicion, resp;
 
         do {
             opc = obj.menu();
@@ -51,6 +51,20 @@ public class Arreglos01 {
                     System.out.println("Insertar numero: ");
                     num = obj.sc.nextInt();
                     obj.insOrden(num);
+                    break;
+                case 8:
+                    System.out.println("Numero a buscar: ");
+                    num = obj.sc.nextInt();
+                    resp = obj.binaria(0, obj.myArray.length - 1, num);
+                    if (resp != -1) {
+                        System.out.println("Esta en posicion: " + resp);
+                    } else {
+                        System.out.println("No esta..");
+                    }
+                    break;
+                case 9:
+                    obj.burbuja();
+                    break;
                 default:
                     break;
             }

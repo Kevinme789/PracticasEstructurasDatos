@@ -31,6 +31,8 @@ public class Metodos {
         System.out.println("Eliminar numero                [5]");
         System.out.println("Agregar numero                 [6]");
         System.out.println("Insertar en orden              [7]");
+        System.out.println("Buscar por busqueda secuencial [8]");
+        System.out.println("Ordenar de forma burbuja       [9]");
         System.out.println("Salir                          [0]");
         return sc.nextInt();
     }
@@ -120,5 +122,32 @@ public class Metodos {
             System.out.println("Arreglo lleno.....");
         }
 
+    }
+
+    public int binaria(int ini, int fin, int num) {
+        int med = (ini + fin) / 2;
+        if (ini <= fin) {
+            if (num == myArray[med]) {
+                return med;
+            } else if (myArray[med] < num) {
+                return binaria(med + 1, fin, num);
+            } else if (num < myArray[med]) {
+                return binaria(ini, med - 1, num);
+            }
+        }
+        return -1;
+
+    }
+
+    public void burbuja() {
+        for (int i = 1; i < ev; i++) {
+            for (int j = 0; j < ev-i; j++) {
+                if (myArray[j] > myArray[j + 1]) {
+                    int cambio = myArray[j];
+                    myArray[j] = myArray[j + 1];
+                    myArray[j + 1] = cambio;
+                }
+            }
+        }
     }
 }
