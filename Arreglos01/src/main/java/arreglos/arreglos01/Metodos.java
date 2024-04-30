@@ -141,7 +141,7 @@ public class Metodos {
 
     public void burbuja() {
         for (int i = 1; i < ev; i++) {
-            for (int j = 0; j < ev-i; j++) {
+            for (int j = 0; j < ev - i; j++) {
                 if (myArray[j] > myArray[j + 1]) {
                     int cambio = myArray[j];
                     myArray[j] = myArray[j + 1];
