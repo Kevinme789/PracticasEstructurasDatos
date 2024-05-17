@@ -10,12 +10,11 @@ package arreglos.tarea4;
  */
 public class Metodos {
 
-    public int finobacci(int[] arreglo, int n) {
-        if (i == 1) {
-            return 0;
+    public int finobacci(int arreglo) {
+        if (arreglo <= 1) {
+            return arreglo;
         }
-        return n + (arreglo, n - 1);
-    
+        return finobacci(arreglo-1)+ finobacci(arreglo-2);
 
     }
 

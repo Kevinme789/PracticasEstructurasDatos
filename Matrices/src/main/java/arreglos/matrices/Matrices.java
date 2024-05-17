@@ -33,6 +33,9 @@ public class Matrices {
                 case 6:
                     m.transponer2();
                     break;
+                case 7:
+                    m.multiplicar();
+                    break;
 
             }
         } while (opc != 0);

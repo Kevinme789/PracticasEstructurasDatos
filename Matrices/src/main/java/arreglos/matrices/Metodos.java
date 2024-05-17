@@ -95,7 +95,7 @@ public class Metodos {
         int k;
         for (int i = 0; i < a.length - 1; i++) {
             k = a.length - 1;
-            for (int j = 0 + 1; j < a[0].length - 1-i; j++) {
+            for (int j = 0 + 1; j < a[0].length - 1 - i; j++) {
                 aux = a[i][j];
                 a[i][j] = a[k][l];
                 a[k][l] = aux;
@@ -103,6 +103,17 @@ public class Metodos {
             }
             l--;
 
+        }
+    }
+
+    public void multiplicar() {
+        for (int i = 0; i < a.length; i++) {
+            for (int l = 0; l < b[0].length; l++) {
+                for (int j= 0;j <a[0].length;j++ ){
+                
+                }
+
+            }
         }
     }
 
