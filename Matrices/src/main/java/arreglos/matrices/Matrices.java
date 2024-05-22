@@ -12,6 +12,7 @@ public class Matrices {
     public static void main(String[] args) {
         Metodos m = new Metodos();
         int opc, num, resp;
+        int[][] a = {{1,2,1},{3,2,1},{1,2,3}}; 
         do {
             opc = m.menu();
             switch (opc) {
@@ -36,6 +37,12 @@ public class Matrices {
                 case 7:
                     m.multiplicar();
                     break;
+                case 8:
+                    m.llenarMatrices();
+                    break;
+                case 9:
+                    int r =m.determinante(a);
+                    System.out.println("El determinante es: "+ r);
 
             }
         } while (opc != 0);
