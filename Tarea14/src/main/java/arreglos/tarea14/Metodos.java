@@ -46,6 +46,7 @@ public class Metodos {
 
     public void push() {
         if (!colaLlena()) {
+            System.out.println("Ingrese la cedula del cliente:");
             myCola[ev] = entrada.nextInt();
             ev++;
         } else {
@@ -60,6 +61,43 @@ public class Metodos {
             ev--;
         } else {
             System.out.println("Cola vacia...");
+        }
+    }
+    public int secuencial(int n) {
+     
+        for (int i = 0; i < ev; i++) {
+            
+            if (n == myCola[i]) {
+                
+                return i;
+                
+            }
+        }
+        
+        return -1;
+    }
+    
+    public void eliminarCliente(int n) {
+        
+        int pos = secuencial(n);
+        
+        if (pos != -1) {
+            
+            desplazarIzq(pos);
+            ev--;
+            System.out.println(" Cliente Retirado... ");
+        } else {
+            System.out.println("El cliente ingresado no existe..");
+        }
+            
+    }
+    
+    public void recorrer() {
+        
+        for (int i = 0; i < ev; i++) {
+            
+            System.out.println(myCola[ev] + " ");
+            
         }
     }
 

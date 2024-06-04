@@ -79,5 +79,6 @@ public class Metodos {
         System.out.printf("La media general de toda la clase es: %.2f\n", media);
 
     }
+    
 
 }
