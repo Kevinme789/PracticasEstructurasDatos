@@ -3,11 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package listas.taller2b2p;
-
-/**
- *
- * @author KevinR
- */
 public class Persona {
     int id;
     String nombre;

@@ -6,10 +6,6 @@ package listas.taller2b2p;
 
 import java.util.Scanner;
 
-/**
- *
- * @author KevinR
- */
 public class Metodos {
 
     Scanner entrada;

@@ -1,12 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+
 package listas.ejercicio08;
 
-/**
- *
- * @author KevinR
- */
 public class Ejercicio08 {
 
     public static void main(String[] args) {
